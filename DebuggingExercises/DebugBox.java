@@ -3,17 +3,17 @@ public class DebugBox
    private int width;
    private int length;
    private int height;
-   private FixDebugBox()
+   public DebugBox()
    {
       length = 1;
       width = 1;
       height = 1;
    }
-   public DebugBox(int width, int length, int height)
+   public DebugBox(int newWidth, int newLength, int newHeight)
    {
-      width = width;
-      length = length;
-      height = height;
+      width = newWidth;
+      length = newLength;
+      height = newHeight;
    }
    public void showData()
    {
@@ -22,7 +22,7 @@ public class DebugBox
    }
    public double getVolume()
    { 
-     double vol = length - width - height;
+     double vol = length * width * height;
      return vol;
    }
 }
